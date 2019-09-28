@@ -146,23 +146,6 @@ describe 'bonus' do
   end
 
 
-def most_points_scored
-  biggest_score = 0
-  game_hash.each do |place, team|
-    team.each do |attribute, data|
-      if attribute == :players
-        data.each do |player|
-          if player[:shoe] > big_shoe
-            big_shoe = player[:shoe]
-            highest_scoring_player = player[:player_name]
-          end
-        end
-      end
-    end
-  end
-  return highest_scoring_player
-end  
-
 def winning_team
   game_hash[:home][:team_name]
 end
